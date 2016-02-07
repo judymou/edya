@@ -1,20 +1,182 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-			<article>
-				<p><a href="/projects">&larr; back to the projects</a></p>
-				<hr>
-				<header>
-					<h1>{{data.post.title}}</h1>
-					<h5>
-						{{{categoryList data.post.categories prefix="Posted in "}}}
-						{{#if author.name.first}}by {{author.name.first}}{{/if}}
-					</h5>
-				</header>
-				<div class="post">
-					{{{data.post.content.extended}}}
-				</div>
-			</article>
-		</div>
-	</div>
-</div>
+<head>
+  <link rel="stylesheet" href="/styles/project.css" />
+  <link rel="stylesheet" href="/styles/project-progress.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body class="right-sidebar" id="project">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+      <div id="header">
+          <div class="layer"></div>
+
+        <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              {{# each navLinks}}
+                <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+                  <a href="{{ href }}">{{ label }}</a>
+                </li>
+              {{/each}}
+            </ul>
+          </nav>
+
+      </div>
+
+    <!-- Main -->
+      <div class="wrapper style1">
+
+        <div class="container">
+          <div class="row 200%">
+            <header>
+              <h2>Carla Gilmore, a retired teacher from California, now helps run computer labs in Mexico and needs help buying three new laptops for her students.</h2>
+            </header>
+            <div class="8u 12u(mobile)" id="content">
+              <article id="main">
+                {{{data.post.content.extended}}}
+              </article>
+            </div>
+            <div class="4u 12u(mobile)" id="sidebar">
+              <hr class="first" />
+              <section>
+                <div class="radial-progress" data-progress="0">
+                  <div class="circle">
+                    <div class="mask full">
+                      <div class="fill"></div>
+                    </div>
+                    <div class="mask half">
+                      <div class="fill"></div>
+                      <div class="fill fix"></div>
+                    </div>
+                    <div class="shadow"></div>
+                  </div>
+                  <div class="inset">
+                    <div class="donate-stats-donor"><h3>Funded by 3 donors</h3></div>
+                    <div class="donate-stats-money">
+                       <div><h3>$425</h3> raised</div>
+                       <div><h3>$132</h3> to go </div>
+                    </div>
+                    <div class="percentage">
+                      <div class="numbers"><span>-</span><span>0%</span><span>1%</span><span>2%</span><span>3%</span><span>4%</span><span>5%</span><span>6%</span><span>7%</span><span>8%</span><span>9%</span><span>10%</span><span>11%</span><span>12%</span><span>13%</span><span>14%</span><span>15%</span><span>16%</span><span>17%</span><span>18%</span><span>19%</span><span>20%</span><span>21%</span><span>22%</span><span>23%</span><span>24%</span><span>25%</span><span>26%</span><span>27%</span><span>28%</span><span>29%</span><span>30%</span><span>31%</span><span>32%</span><span>33%</span><span>34%</span><span>35%</span><span>36%</span><span>37%</span><span>38%</span><span>39%</span><span>40%</span><span>41%</span><span>42%</span><span>43%</span><span>44%</span><span>45%</span><span>46%</span><span>47%</span><span>48%</span><span>49%</span><span>50%</span><span>51%</span><span>52%</span><span>53%</span><span>54%</span><span>55%</span><span>56%</span><span>57%</span><span>58%</span><span>59%</span><span>60%</span><span>61%</span><span>62%</span><span>63%</span><span>64%</span><span>65%</span><span>66%</span><span>67%</span><span>68%</span><span>69%</span><span>70%</span><span>71%</span><span>72%</span><span>73%</span><span>74%</span><span>75%</span><span>76%</span><span>77%</span><span>78%</span><span>79%</span><span>80%</span><span>81%</span><span>82%</span><span>83%</span><span>84%</span><span>85%</span><span>86%</span><span>87%</span><span>88%</span><span>89%</span><span>90%</span><span>91%</span><span>92%</span><span>93%</span><span>94%</span><span>95%</span><span>96%</span><span>97%</span><span>98%</span><span>99%</span><span>100%</span></div>
+                    </div>
+                  </div>
+                </div>
+                <footer class="donate">
+                  <a href="#" class="button">Donate Now</a>
+                </footer>
+              </section>
+              <hr></hr>
+              <section>
+                <header>
+                  <h3>Key Points</h3>
+                </header>
+                <!--
+                <p>
+                  The village is very poor (fishermen) who can't fish because they've over fished the area.
+                </p>
+                -->
+                <div class="row 50%">
+                  <div class="3u 1u(mobile)">
+                    <span class="fa-stack fa-lg highlight-number">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-inverse fa-stack-1x">20</i>
+                    </span>
+                  </div>
+                  <div class="9u 10u(mobile)">
+                    <p><b>20 kids to 1 computer</b> at the school lab, and most do not have computers at home.</p>
+                  </div>
+                </div>
+                <div class="row 50%">
+                  <div class="3u 1u(mobile)">
+                    <span class="fa-stack fa-lg highlight-number">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-inverse fa-stack-1x">8</i>
+                    </span>
+                  </div>
+                  <div class="9u 10u(mobile)">
+                    <p>The average computer age is <b>8 years</b>. They are maintained by having parts being replaced.</p>
+                  </div>
+                </div>
+                <div class="row 50%">
+                  <div class="3u 1u(mobile)">
+                    <span class="fa-stack fa-lg highlight-number">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-inverse fa-stack-1x">20</i>
+                    </span>
+                  </div>
+                  <div class="9u 10u(mobile)">
+                    <p>The village has been overfished which elimiated many jobs, and the average daily income is <b>$20</b>.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <article class="4u 12u(mobile) special">
+              <a href="#" class="image subfeatured"><img src="/images/pic01.jpg" alt="" /></a>
+              <header>
+                <h3><a href="#">Abbo Omiata</a></h3>
+              </header>
+              <p>She wants to buy board games for students to learn at home and to play with their parents.</p>
+            </article>
+            <article class="4u 12u(mobile) special">
+              <a href="#" class="image subfeatured"><img src="/images/pic02.jpg" alt="" /></a>
+              <header>
+                <h3><a href="#">Bingjie Yu</a></h3>
+              </header>
+            <p>She wants to buy more textbooks so her students don't have to take turns doing readings.</p>
+            </article>
+            <article class="4u 12u(mobile) special">
+              <a href="#" class="image subfeatured"><img src="/images/pic03.jpg" alt="" /></a>
+              <header>
+                <h3><a href="#">Neha Gupta</a></h3>
+              </header>
+              <p>She wants to use tablets in class to introduce a new way of interacting with students.</p>
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+    <!-- Footer -->
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="12u">
+
+              <!-- Contact -->
+                <section class="contact">
+                  <header>
+                    <h3>100% Guarantee</h3>
+                  </header>
+                  <p>100% of your donation funds education projects; we prove it by being transparent.</p>
+                </section>
+
+              <!-- Copyright -->
+                <div class="copyright">
+                  <ul class="menu">
+                    <li>&copy; <a href="http://judymou.com">Judy Mou</a> and <a href="https://www.linkedin.com/in/hannahcyang">Hannah Yang</a></li>
+                  </ul>
+                </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.onvisible.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/js/main.js"></script>
+    <script src="/js/index.js"></script>
+
+</body>
