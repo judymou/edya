@@ -348,6 +348,10 @@ module.exports = function() {
 	_helpers.underscoreFormat = function (obj, underscoreMethod) {
 		return obj._[underscoreMethod].format();
 	}
+
+  _helpers.minus = function (left, right) {
+    return left - right;
+  }
 	
 	return _helpers;
 };
