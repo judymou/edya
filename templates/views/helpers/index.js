@@ -107,7 +107,7 @@ module.exports = function() {
 			if (autolink) {
 				return _.map(tags, function(tag) {
 					return linkTemplate({
-						url: ('/blog/' + tag.key),
+						url: ('/projects/' + tag.key),
 						text: _.escape(tag.name)
 					});
 				}).join(separator);
@@ -216,7 +216,7 @@ module.exports = function() {
 	
 	// Direct url link to a specific post
 	_helpers.postUrl = function(postSlug, options) {
-		return ('/blog/post/' + postSlug);
+		return ('/projects/post/' + postSlug);
 	};
 	
 	// might be a ghost helper
