@@ -21,6 +21,18 @@ Post.add({
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }
 	},
+  keyPoint1: {
+    brief: { type: String},
+    extended: {type: Types.Html, wysiwyg: true, height: 150}
+  },
+  keyPoint2: {
+    brief: { type: String},
+    extended: {type: Types.Html, wysiwyg: true, height: 150}
+  },
+  keyPoint3: {
+    brief: { type: String},
+    extended: {type: Types.Html, wysiwyg: true, height: 150}
+  },
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true }
 });
 
