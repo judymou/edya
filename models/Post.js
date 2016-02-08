@@ -17,7 +17,8 @@ Post.add({
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	image: { type: Types.CloudinaryImage },
-	amount: { type: Number },
+	imageUrl: {type: String},
+  amount: { type: Number },
   amountRaised: { type: Number},
   numDonors: { type: Number },
   content: {
