@@ -206,9 +206,9 @@
 
 				// Init.
 					$window.load(function() {
-
-						reelWidth = $reel[0].scrollWidth;
-
+            if ($reel[0]) {
+              reelWidth = $reel[0].scrollWidth;
+            }
 						skel.on('change', function() {
 
 							if (skel.vars.touch) {
@@ -236,7 +236,9 @@
 						});
 
 						$window.resize(function() {
-							reelWidth = $reel[0].scrollWidth;
+              if ($reel[0]) {
+                reelWidth = $reel[0].scrollWidth;
+              }
 							$t._update();
 						}).trigger('resize');
 

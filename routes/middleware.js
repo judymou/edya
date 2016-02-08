@@ -17,6 +17,7 @@ var _ = require('underscore');
 	The included layout depends on the navLinks array to generate
 	the navigation in the header, you may wish to change this array
 	or replace it with your own templates / logic.
+		{ label: 'Contact',		key: 'contact',		href: '/contact' }
 */
 
 exports.initLocals = function(req, res, next) {
@@ -26,7 +27,6 @@ exports.initLocals = function(req, res, next) {
 	locals.navLinks = [
 		{ label: 'Home',		key: 'home',		href: '/' },
 		{ label: 'Projects',		key: 'projects',		href: '/projects' },
-		{ label: 'Contact',		key: 'contact',		href: '/contact' }
 	];
 	
 	locals.user = req.user;
