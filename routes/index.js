@@ -36,6 +36,8 @@ var routes = {
 };
 
 // Setup Route Bindings
+// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
+// app.get('/protected', middleware.requireUser, routes.views.protected);
 exports = module.exports = function(app) {
 	// Views
 	app.get('/', routes.views.index);
@@ -55,9 +57,30 @@ exports = module.exports = function(app) {
         res.send('error');
         return;
       }
-      res.send('ok');
+      saveDonation(req.query.amount, req.query.project, res);
     });
   });
-	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
-	// app.get('/protected', middleware.requireUser, routes.views.protected);
+
+  function saveDonation(amount, project, res) {
+    var project = /[^/]*$/.exec(project)[0];
+    var q = keystone.list('Post').model.findOne({
+      state: 'published',
+      slug: project
+    });
+
+    q.exec(function(err, result) {
+      if (err) {
+        res.send('error');
+      }
+      result.set({numDonors: result.numDonors + 1,
+                  amountRaised: result.amountRaised + amount / 100.0});
+      result._req_user = 'user';
+      result.save(function(err) {
+        if (err) {
+          res.send('error');
+        }
+        res.send('ok');
+      });
+    });
+  }
 };
