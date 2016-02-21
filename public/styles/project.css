@@ -68,7 +68,7 @@
   border-top: solid 1px rgba(128, 128, 128, 0.2);
   border-bottom: solid 1px rgba(128, 128, 128, 0.2);
 }
-  
+
 #project hr:before, hr:after {
   content: '';
   position: absolute;
@@ -89,7 +89,7 @@
 
 #project .donate {
   margin: auto;
-  width: 51%;
+  width: 60%;
   margin-top: 3em;
 }
 
@@ -100,4 +100,54 @@
 #project .button {
   padding-left: 2em;
   padding-right: 2em;
+  height: 3.5em;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.donation-amount-container {
+  display: inline;
+  position: relative;
+}
+
+.donation-amount {
+  font-weight: bold;
+  color: black;
+  float: none;
+  border: 1px solid #dcdcdc;
+  width: 55%;
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 .5em 0 0;
+  font-size: 16px;
+  padding: 0 1.5em;
+  outline: none;
+  background: #fff;
+  -webkit-box-shadow: inset 0 2px 0 0 #f6f6f6;
+  -moz-box-shadow: inset 0 2px 0 0 #f6f6f6;
+  box-shadow: inset 0 2px 0 0 #f6f6f6;
+  height: 3.5em;
+}
+
+.inline-button {
+  display: inline-block;
+  vertical-align: top;
+  width: 39%;
+}
+
+.donation-amount-container:before {
+  content: '$';
+  position: absolute;
+  display: block;
+  left: .75em;
+  top: 1px;
+  color: #939393;
 }
