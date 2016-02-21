@@ -1,7 +1,7 @@
 function App() {
   var me = this;
 
-  App.prototype.init = function() { 
+  App.prototype.init = function() {
     window.randomize = function() {
       var amountRaised = parseInt($('#amountRaised').text());
       var amountLeft = parseInt($('#amountLeft').text());
@@ -17,7 +17,7 @@ function App() {
     token: function(token) {
       document.body.style.cursor = 'wait';
       $.get('/pay?email=' + token.email + '&tok=' + token.id + '&amount=' +
-        $('#amount').val() * 100, function(resp) {
+        $('#amount').val() * 100 + '&project=' + window.location.pathname, function(resp) {
           document.body.style.cursor='default';
           if (resp === 'ok') {
             window.alert("Thanks! We'll follow up with confirmation and updates of your donation.");

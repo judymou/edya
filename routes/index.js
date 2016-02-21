@@ -22,6 +22,10 @@ var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
+var stripe = require('stripe')(
+  process.env.STRIPE_SK
+);
+
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
@@ -33,14 +37,27 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
-	
 	// Views
 	app.get('/', routes.views.index);
 	app.get('/projects/:category?', routes.views.projects);
 	app.get('/projects/post/:post', routes.views.post);
 	app.all('/contact', routes.views.contact);
-	
+
+  app.get('/pay', function(req, res) {
+    stripe.charges.create({
+      amount: req.query.amount,
+      currency: 'usd',
+      source: req.query.tok,
+      description: 'Charge for ' + req.query.project + ' - ' + req.query.email,
+    }, function(err, charge) {
+      if (err) {
+        console.log(err, charge);
+        res.send('error');
+        return;
+      }
+      res.send('ok');
+    });
+  });
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
-	
 };

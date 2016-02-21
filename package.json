@@ -11,8 +11,9 @@
     "express-handlebars": "^1.1.0",
     "handlebars": "^2.0.0",
     "node-sass": "^3.3.2",
-    "node-sass-middleware": "^0.9.7", 
-    "dotenv": "^1.1.0"
+    "node-sass-middleware": "^0.9.7",
+    "dotenv": "^1.1.0",
+    "stripe": "latest"
   },
   "devDependencies": {
     "gulp": "^3.7.0",
@@ -21,7 +22,6 @@
     "gulp-shell": "^0.5.0",
     "gulp-watch": "^4.3.5",
     "gulp-sass": "^2.0.4"
-    
   },
   "engines": {
     "node": ">=0.10.22",
