@@ -3,6 +3,10 @@
   margin-bottom: 2em;
 }
 
+#projects .carousel {
+  text-align: center;
+}
+
 #projects i {
   font-size: 0.8em;
 }

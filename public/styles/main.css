@@ -1755,7 +1755,7 @@
 		}
 
     .image.featured img {
-      height: 13em;
+      height: 15em;
     }
 
 		.image.left {
@@ -2638,7 +2638,7 @@
 
 		.carousel article {
 			display: inline-block;
-			width: 18em;
+			width: 22em;
 			background: #fff;
 			text-align: center;
 			padding: 0 1em 3em 1em;
@@ -2690,7 +2690,7 @@
 				}
 
 				.carousel article {
-					width: 18em;
+					width: 22em;
 					margin: 0 1.25em 0 0;
 				}
 
@@ -2776,7 +2776,7 @@
 			}
 
 				.carousel article {
-					width: 18em;
+					width: 22em;
 					margin: 0 1em 0 0;
 				}
 
