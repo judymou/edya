@@ -2,10 +2,22 @@
   color: #ef8376;
 }
 
+#project .fa-stack {
+  line-height: 2.4em;
+}
+
+#project .fa-stack-2x {
+  font-size: 2.5em;
+}
+
 #project .highlight-number {
   font-size:2vw;
   padding-left:2.7em;
   padding-top:0.2em;
+}
+
+#project .keypoint-description {
+  float: right;
 }
 
 #project .number-circle {
