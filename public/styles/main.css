@@ -397,7 +397,7 @@
 	}
 
 	.\33 u, .\33 u\24 {
-		width: 25%;
+		width: 29%;
 		clear: none;
 		margin-left: 0;
 	}
@@ -1755,7 +1755,7 @@
 		}
 
     .image.featured img {
-      height: 15em;
+      #height: 15em;
     }
 
 		.image.left {
@@ -2638,7 +2638,7 @@
 
 		.carousel article {
 			display: inline-block;
-			width: 22em;
+			#width: 22em;
 			background: #fff;
 			text-align: center;
 			padding: 0 1em 3em 1em;
@@ -2690,7 +2690,7 @@
 				}
 
 				.carousel article {
-					width: 22em;
+					#width: 22em;
 					margin: 0 1.25em 0 0;
 				}
 
@@ -2776,7 +2776,7 @@
 			}
 
 				.carousel article {
-					width: 22em;
+					#width: 22em;
 					margin: 0 1em 0 0;
 				}
 
@@ -3187,9 +3187,9 @@
 				}
 
 				.carousel article {
-					width: 14em;
+					#width: 14em;
 					padding-bottom: 2em;
-					margin: 0 0.5em 0 0;
+					margin: 0.5em 0.5em 2em 0;
 				}
 
 					.carousel article .image {
