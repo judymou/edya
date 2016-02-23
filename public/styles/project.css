@@ -99,9 +99,13 @@
   right: -1px;
 }
 
+#project .circle-and-donate {
+  text-align: center;
+}
+
 #project .donate {
   margin: auto;
-  width: 70%;
+  width: 12em;
   margin-top: 3em;
   opacity: 100;
   -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
