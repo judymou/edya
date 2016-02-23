@@ -1549,6 +1549,9 @@
 	}
 
 /* Basic */
+  .explain-edya {
+    padding-bottom: 4em;
+  }
 
 	body {
 		background: #f0f4f4;
@@ -2090,7 +2093,7 @@
 	.wrapper {
 		background: #fff;
 		margin: 0;
-		padding: 4em 0 4em 0;
+		padding-top: 4em;
 	}
 
 		.wrapper.style2 {
