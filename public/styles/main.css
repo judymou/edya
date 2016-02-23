@@ -391,7 +391,7 @@
 	}
 
 	.\34 u, .\34 u\24 {
-		width: 33.3333333333%;
+		width: 29%;
 		clear: none;
 		margin-left: 0;
 	}
@@ -402,13 +402,7 @@
 		margin-left: 0;
 	}
 
-	#projects .\33 u, .\33 u\24 {
-		width: 29%;
-		clear: none;
-		margin-left: 1.25em;
-	}
-
-	.\32 u, .\32 u\24 {
+  .\32 u, .\32 u\24 {
 		width: 16.6666666667%;
 		clear: none;
 		margin-left: 0;
@@ -3202,7 +3196,7 @@
 				.carousel article {
 					#width: 14em;
 					padding-bottom: 2em;
-					margin: 0.5em 0.5em 2em 0;
+					margin: 0.5em 0.5em 2em 0.8em;
 				}
 
 					.carousel article .image {
