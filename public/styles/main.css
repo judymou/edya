@@ -396,10 +396,16 @@
 		margin-left: 0;
 	}
 
-	.\33 u, .\33 u\24 {
-		width: 29%;
+  .\33 u, .\33 u\24 {
+		width: 25%;
 		clear: none;
 		margin-left: 0;
+	}
+
+	#projects .\33 u, .\33 u\24 {
+		width: 29%;
+		clear: none;
+		margin-left: 1.25em;
 	}
 
 	.\32 u, .\32 u\24 {
@@ -2666,7 +2672,7 @@
 
 			.carousel article p {
 				text-align: center;
-			}
+      }
 
 /* Wide */
 

@@ -226,8 +226,8 @@
 								$reel
 									.css('overflow', 'visible')
 									.scrollLeft(0);
-								$forward.show();
-								$backward.show();
+								//$forward.show();
+								//$backward.show();
 
 							}
 
