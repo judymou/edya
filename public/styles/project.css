@@ -100,7 +100,6 @@
 }
 
 #project .circle-and-donate {
-  text-align: center;
 }
 
 #project .donate {
@@ -110,6 +109,7 @@
   opacity: 100;
   -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
   transition: 2s;
+  text-align: center;
 }
 
 #project .donate-stats-money h3{
