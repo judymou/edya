@@ -6,7 +6,8 @@ function App() {
     $('.radial-progress').click(me._loadProgress);
 
     var handler = StripeCheckout.configure({
-      key: 'pk_test_TFHGrWKWYdgVzsv5eLm3PW9C',
+      //key: 'pk_test_TFHGrWKWYdgVzsv5eLm3PW9C',
+      key: 'pk_live_P6ceN46QXkER4okBzAREqSeV',
       token: function(token) {
         document.body.style.cursor = 'wait';
         $.get('/pay?email=' + token.email + '&tok=' + token.id + '&amount=' +
