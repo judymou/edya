@@ -2,6 +2,8 @@ function App() {
   var me = this;
 
   App.prototype.init = function() {
+    $('[data-toggle="tooltip"]').tooltip();
+
     setTimeout(me._loadProgress, 200);
     $('.radial-progress').click(me._loadProgress);
 
