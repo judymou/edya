@@ -3,7 +3,7 @@ function App() {
   App.prototype.init = function () {
     var items = [
       ['extracurricular reading', 'classroom content support', 'classroom experience'],
-      ['primary school', 'middle school', 'high school', 'university'],
+      ['primary', 'middle', 'high', 'university'],
       ['computer', 'tablet', 'eReader', 'phone'],
       ['no internet', 'infrequent', 'stable'],
       ['free']
@@ -16,7 +16,11 @@ function App() {
       for (var j = 0; j < items[i].length; j++) {
         var label = $('<label>');
         label.append($('<input type="checkbox"/>').attr('id', items[i][j].toLowerCase().replace(/ /g, '_')));
-        label.append(items[i][j]);
+        if (items[i][j] == 'primary' || items[i][j] == 'middle' || items[i][j] == 'high') {
+          label.append(items[i][j] += " school");
+        } else {
+          label.append(items[i][j]);
+        }
         $('.' + tags[i].toLowerCase().replace(/ /g, "_")).append(label);
       }
     }
@@ -44,7 +48,7 @@ function App() {
         var txt = place.text().toLowerCase();
         var checkItems = [];
         checkItems = checkItems.concat(me._getCheckedItemsNoTag(items[0]));
-        checkItems = checkItems.concat(me._getCheckedItems(items[1], 'all grades'));
+        //checkItems = checkItems.concat(me._getCheckedItems(items[1], 'all grades'));
         checkItems = checkItems.concat(me._getCheckedItems(items[2], 'all devices'));
         checkItems = checkItems.concat(me._getCheckedItems(items[3], 'all connection types'));
         checkItems = checkItems.concat(me._getCheckedItemsNoTag(items[4]));
@@ -56,7 +60,16 @@ function App() {
           }
         }
         if (passAllFilters) {
-          place.show();
+          for (var i = 0; i < items[1].length; i++) {
+            if ($('#' + items[1][i]).prop('checked') && txt.indexOf(checkItems[i].replace(/_/g, ' ')) < 0
+              && txt.indexOf("all grades") < 0) {
+              passAllFilter = false;
+              break;
+            }
+          }
+          if (passAllFilter) {
+            place.show();
+          }
         }
       });
     });
