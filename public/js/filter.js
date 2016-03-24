@@ -67,7 +67,7 @@ function App() {
               break;
             }
           }
-          if (passAllFilter) {
+          if (passAllFilters) {
             place.show();
           }
         }
