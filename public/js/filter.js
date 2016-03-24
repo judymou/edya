@@ -61,7 +61,7 @@ function App() {
         }
         if (passAllFilters) {
           for (var i = 0; i < items[1].length; i++) {
-            if ($('#' + items[1][i]).prop('checked') && txt.indexOf(checkItems[i].replace(/_/g, ' ')) < 0
+            if ($('#' + items[1][i]).prop('checked') && txt.indexOf(items[1][i].replace(/_/g, ' ')) < 0
               && txt.indexOf("all grades") < 0) {
               passAllFilter = false;
               break;
