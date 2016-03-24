@@ -12,7 +12,7 @@ function App() {
       'Goals', 'Grade', 'Device', 'Internet', 'Cost'
     ];
     for (var i = 0; i < tags.length; i++) {
-      $('.' + tags[i].toLowerCase().replace(/ /g, "_")).append('<h4>' + tags[i] + '</h4>');
+      $('.' + tags[i].toLowerCase().replace(/ /g, "_")).append('<h4>' + tags[i] + ':</h4>');
       for (var j = 0; j < items[i].length; j++) {
         var label = $('<label>');
         label.append($('<input type="checkbox"/>').attr('id', items[i][j].toLowerCase().replace(/ /g, '_')));

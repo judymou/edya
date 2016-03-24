@@ -1,7 +1,15 @@
+.resources {
+  padding-top: 0em !important;
+}
 .resource {
   vertical-align: top;
   height: 35em;
   margin-top: 2em;
+}
+
+.filters {
+  padding-top: 0em !important;
+  padding-bottom:0em !important;
 }
 
 .filters h4 {
