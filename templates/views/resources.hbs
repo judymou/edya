@@ -1,5 +1,6 @@
 <head>
   <link rel="stylesheet" href="/styles/projects.css" />
+  <link rel="stylesheet" href="/styles/resources.css" />
   <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 <body class="right-sidebar" id="projects">
@@ -25,7 +26,7 @@
     <!-- Carousel -->
       <section class="carousel">
         {{# each data.resources.results}}
-          <article class="4u 11u(mobile)">
+          <article class="4u 11u(mobile) resource">
             <a href="{{url}}" class="image featured"><img src="{{imageUrl}}" alt="" /></a>
             <header>
               <h3><a href="{{url}}">{{productName}}</a><p><i>{{productDetail1}}</i></p></h3>
