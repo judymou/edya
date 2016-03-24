@@ -1,4 +1,35 @@
 .resource {
   vertical-align: top;
   height: 35em;
+  margin-top: 2em;
+}
+
+.filters h4 {
+  display: inline;
+  margin-right: 7px;
+}
+
+.filters div {
+  padding-top: 15px;
+}
+
+.filters label {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 6px;
+  color: #ef8376;   
+  border-radius: 6px;
+
+  font-weight: 500;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.filters input {
+  display: none;
+}
+
+.filters label.active:before {
+  content: '✓ ';
 }
