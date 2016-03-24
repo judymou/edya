@@ -43,7 +43,8 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.get('/projects/:category?', routes.views.projects);
 	app.get('/projects/post/:post', routes.views.post);
-	app.all('/contact', routes.views.contact);
+	app.get('/resources', routes.views.resources);
+  app.all('/contact', routes.views.contact);
 
   app.get('/pay', function(req, res) {
     stripe.charges.create({

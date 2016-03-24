@@ -1,0 +1,81 @@
+<head>
+  <link rel="stylesheet" href="/styles/projects.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body class="right-sidebar" id="projects">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+      <div id="header">
+          <div class="layer"></div>
+
+        <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              {{# each navLinks}}
+                <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+                  <a href="{{ href }}">{{ label }}</a>
+                </li>
+              {{/each}}
+            </ul>
+          </nav>
+
+      </div>
+
+    <!-- Carousel -->
+      <section class="carousel">
+        {{# each data.resources.results}}
+          <article class="4u 11u(mobile)">
+            <a href="{{url}}" class="image featured"><img src="{{imageUrl}}" alt="" /></a>
+            <header>
+              <h3><a href="{{url}}">{{productName}}</a><p><i>{{productDetail1}}</i></p></h3>
+            </header>
+            <p>{{productDetail2}}</p>
+          </article>
+        {{/each}}
+      </section>
+    <!-- Footer -->
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="12u">
+
+              <!-- Contact -->
+                <section class="contact">
+                  <header>
+                    <h3>100% Guarantee</h3>
+                  </header>
+                  <p>100% of your donation funds education projects.</p>
+                </section>
+
+              <!-- Copyright -->
+                <div class="copyright">
+                  <ul class="menu">
+                    <li>&copy; <a href="http://judymou.com">Judy Mou</a> and <a href="https://www.linkedin.com/in/hannahcyang">Hannah Yang</a></li>
+                  </ul>
+                </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.onvisible.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/js/main.js"></script>
+
+    <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+    mixpanel.init("e62fe2ef53deba5910532be840adbf1a");</script><!-- end Mixpanel -->
+    <script>mixpanel.track('home');</script> 
+
+</body>
