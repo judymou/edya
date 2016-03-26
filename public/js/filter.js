@@ -37,11 +37,6 @@ function App() {
         }
       }
 
-      if (count === items.length) {
-        // all selected
-        $('.resource').show();
-        return;
-      }
       $('.resource').hide();
       $('.resource').each(function(p, item) {
         var place = $(item);
