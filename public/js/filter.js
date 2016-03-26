@@ -49,8 +49,8 @@ function App() {
         var checkItems = [];
         checkItems = checkItems.concat(me._getCheckedItemsNoTag(items[0]));
         //checkItems = checkItems.concat(me._getCheckedItems(items[1], 'all grades'));
-        checkItems = checkItems.concat(me._getCheckedItems(items[2], 'all devices'));
-        checkItems = checkItems.concat(me._getCheckedItems(items[3], 'all connection types'));
+        //checkItems = checkItems.concat(me._getCheckedItems(items[2], 'all devices'));
+        //checkItems = checkItems.concat(me._getCheckedItems(items[3], 'all connection types'));
         checkItems = checkItems.concat(me._getCheckedItemsNoTag(items[4]));
         var passAllFilters = true;
         for (var i = 0; i < checkItems.length; i++) {
@@ -59,34 +59,26 @@ function App() {
             break;
           }
         }
+        passAllFilters = passAllFilters && me._passFilters(txt, items[1], 'all grades');
+        passAllFilters = passAllFilters && me._passFilters(txt, items[2], 'all devices');
+        passAllFilters = passAllFilters && me._passFilters(txt, items[3], 'all connection types');
         if (passAllFilters) {
-          for (var i = 0; i < items[1].length; i++) {
-            if ($('#' + items[1][i]).prop('checked') && txt.indexOf(items[1][i].replace(/_/g, ' ')) < 0
-              && txt.indexOf("all grades") < 0) {
-              passAllFilter = false;
-              break;
-            }
-          }
-          if (passAllFilters) {
-            place.show();
-          }
+          place.show();
         }
       });
     });
   };
 
-  App.prototype._getCheckedItems = function(a, newTag) {
-    var itemChecked = [];
-    for (var i = 0; i < a.length; i++) {
-      if ($('#'+a[i]).prop('checked')) {
-        itemChecked.push(a[i]);
+  App.prototype._passFilters = function(txt, filters, alternativeTag) {
+    for (var i = 0; i < filters.length; i++) {
+      if ($('#' + filters[i]).prop('checked') && txt.indexOf(filters[i].replace(/_/g, ' ')) < 0
+        && txt.indexOf(alternativeTag) < 0) {
+        return false;
       }
     }
-    if (itemChecked.length == a.length) {
-      return [newTag];
-    }
-    return itemChecked;
+    return true;
   }
+
   App.prototype._getCheckedItemsNoTag = function(a) {
     var itemChecked = [];
     for (var i = 0; i < a.length; i++) {
