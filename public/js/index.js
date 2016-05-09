@@ -26,12 +26,10 @@ function App() {
     });
 
     $('#give-button').on('click', function() {
-      /*
-      handler.open({
-        name:'Edya',
-        amount: $('#amount').val() * 100,
-      });
-      */
+      //handler.open({
+      //  name:'Edya',
+      //  amount: $('#amount').val() * 100,
+      //});
       window.alert('Current campaign cycle closed and we no longer take more donations. Please come back later for more projects! Thanks :)');
     });
   };
